@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Venix Script Hub</title>
 
-    <!-- Add Google Font (Poppins and Fredoka One) -->
+    <!-- Add Google Font (Poppins) -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 
     <style>
         * {
@@ -35,11 +34,12 @@
             justify-content: space-between;
             width: 100%;
             padding: 20px;
-            background-color: #1f1f1f;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+            background-color: transparent; /* Make it transparent */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add a slight shadow for readability */
             position: fixed;
             top: 0;
             z-index: 1000;
+            transition: background-color 0.3s ease;
         }
 
         .navbar a {
@@ -59,6 +59,11 @@
             font-size: 1.6em;
         }
 
+        /* Add background on scroll */
+        body.scrolled .navbar {
+            background-color: rgba(31, 31, 31, 0.9); /* Add semi-transparent background on scroll */
+        }
+
         /* Main section */
         .main-content {
             margin-top: 100px;
@@ -70,7 +75,7 @@
         h1 {
             font-size: 2.5em;
             line-height: 1.2em;
-            color: white;
+            color: white; /* All white */
             font-weight: 700;
             margin-bottom: 20px;
         }
@@ -94,21 +99,21 @@
         }
 
         .button {
-            background-color: #fff;
-            color: #393e46;
+            background-color: #393e46;
+            color: white;
             padding: 15px 30px;
             margin: 10px;
             border: none;
             border-radius: 30px;
             cursor: pointer;
             font-size: 1em;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Poppins', sans-serif; /* Modern font */
             transition: background-color 0.3s, box-shadow 0.3s;
         }
 
         .button:hover {
-            background-color: #f0f0f0;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            background-color: #00adb5;
+            box-shadow: 0 4px 10px rgba(0, 173, 181, 0.4);
         }
 
         /* Footer */
@@ -130,7 +135,7 @@
 
         section h2 {
             font-size: 2em;
-            color: white;
+            color: white; /* White color */
             margin-bottom: 20px;
         }
 
@@ -138,86 +143,6 @@
             color: #bdbdbd;
             font-size: 1.1em;
             line-height: 1.6em;
-        }
-
-        /* Scripts section */
-        .search-container {
-            margin: 30px auto;
-            max-width: 800px;
-            padding: 20px;
-        }
-
-        .search-container input {
-            padding: 10px;
-            font-size: 1em;
-            border: 1px solid #333;
-            border-radius: 5px;
-            width: calc(100% - 120px);
-        }
-
-        .search-container button {
-            padding: 10px 20px;
-            font-size: 1em;
-            border: none;
-            background-color: #00adb5;
-            color: white;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-left: 10px;
-        }
-
-        .search-container button:hover {
-            background-color: #008c95;
-        }
-
-        .script-cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        .script-card {
-            background-color: #1f1f1f;
-            border-radius: 10px;
-            padding: 20px;
-            width: 300px;
-            text-align: left;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .script-card-content {
-            margin-bottom: 20px;
-        }
-
-        .script-card h3 {
-            margin-bottom: 10px;
-            color: white; /* Title color */
-            font-size: 1.5em;
-        }
-
-        .script-card p {
-            margin-bottom: 10px;
-            color: #bdbdbd;
-        }
-
-        .script-card button {
-            background-color: #fff;
-            color: #393e46; /* Button text color */
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s;
-        }
-
-        .script-card button:hover {
-            background-color: #f0f0f0;
         }
     </style>
 </head>
@@ -228,7 +153,7 @@
         <div class="logo">Venix Hub</div>
         <div>
             <a href="#about">About</a>
-            <a href="#scripts">Get Scripts</a>
+            <a href="#faq">FAQ</a>
             <a href="#discord">Discord</a>
         </div>
     </div>
@@ -255,6 +180,23 @@
         </p>
     </section>
 
+    <!-- FAQ Section -->
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <p>
+            <strong>Q1:</strong> What kind of scripts do you offer?<br>
+            <strong>A:</strong> We offer a wide range of scripts for games, automation, and more, all designed to run smoothly and effectively.
+        </p>
+        <p>
+            <strong>Q2:</strong> How do I get started?<br>
+            <strong>A:</strong> Simply click the "Start Now" button above, and you’ll be guided through the process of using our scripts.
+        </p>
+        <p>
+            <strong>Q3:</strong> Are your scripts customizable?<br>
+            <strong>A:</strong> Yes! We offer full customization options for our scripts to fit your specific needs.
+        </p>
+    </section>
+
     <!-- Discord Section -->
     <section id="discord">
         <h2>Join Our Discord</h2>
@@ -266,77 +208,20 @@
         </div>
     </section>
 
-    <!-- Script Search and Get Scripts Section -->
-    <section id="scripts">
-        <div class="search-container">
-            <input type="text" id="search-input" placeholder="Search for scripts...">
-            <button onclick="searchScripts()">Search</button>
-        </div>
-        <h2>Get Your Scripts</h2>
-        <div class="script-cards">
-            <div class="script-card" data-title="Solara">
-                <div class="script-card-content">
-                    <h3>Solara</h3>
-                    <p>Description of Solara. Quick overview of its features and benefits.</p>
-                    <button onclick="window.location.href='https://pastebin.com/your-script-url-1'">Get Script</button>
-                </div>
-            </div>
-            <div class="script-card" data-title="Celery">
-                <div class="script-card-content">
-                    <h3>Celery</h3>
-                    <p>Description of Celery. Quick overview of its features and benefits.</p>
-                    <button onclick="window.location.href='https://pastebin.com/your-script-url-2'">Get Script</button>
-                </div>
-            </div>
-            <div class="script-card" data-title="Wave">
-                <div class="script-card-content">
-                    <h3>Wave</h3>
-                    <p>Description of Wave. Quick overview of its features and benefits.</p>
-                    <button onclick="window.location.href='https://pastebin.com/your-script-url-3'">Get Script</button>
-                </div>
-            </div>
-            <div class="script-card" data-title="Doors Script">
-                <div class="script-card-content">
-                    <h3>Doors Script</h3>
-                    <p>Description of Doors Script. Quick overview of its features and benefits.</p>
-                    <button onclick="window.location.href='https://pastebin.com/your-script-url-4'">Get Script</button>
-                </div>
-            </div>
-            <div class="script-card" data-title="Highlight Hub (MM2)">
-                <div class="script-card-content">
-                    <h3>Highlight Hub (MM2)</h3>
-                    <p>Description of Highlight Hub (MM2). Quick overview of its features and benefits.</p>
-                    <button onclick="window.location.href='https://pastebin.com/your-script-url-5'">Get Script</button>
-                </div>
-            </div>
-            <div class="script-card" data-title="Orion (UI Library)">
-                <div class="script-card-content">
-                    <h3>Orion (UI Library)</h3>
-                    <p>Description of Orion (UI Library). Quick overview of its features and benefits.</p>
-                    <button onclick="window.location.href='https://pastebin.com/your-script-url-6'">Get Script</button>
-                </div>
-            </div>
-            <div class="script-card" data-title="Eclipse hub">
-                <div class="script-card-content">
-                    <h3>Eclipse hub</h3>
-                    <p>Description of Eclipse hub. Quick overview of its features and benefits.</p>
-                    <button onclick="window.location.href='https://pastebin.com/your-script-url-7'">Get Script</button>
-                </div>
-            </div>
-            <div class="script-card" data-title="Nsexpression (TSBG)">
-                <div class="script-card-content">
-                    <h3>Nsexpression (TSBG)</h3>
-                    <p>Description of Nsexpression (TSBG). Quick overview of its features and benefits.</p>
-                    <button onclick="window.location.href='https://pastebin.com/your-script-url-8'">Get Script</button>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Footer -->
+    <footer>&copy; Venix 2024</footer>
 
-    <footer>
-        &copy; 2024 Venix Script Hub. All rights reserved.
-    </footer>
+    <!-- JavaScript for background change on scroll -->
+    <script>
+        window.addEventListener("scroll", function() {
+            const navbar = document.querySelector(".navbar");
+            if (window.scrollY > 50) {
+                document.body.classList.add("scrolled");
+            } else {
+                document.body.classList.remove("scrolled");
+            }
+        });
+    </script>
 
-    <script src="script.js"></script>
 </body>
 </html>
