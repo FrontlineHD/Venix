@@ -33,7 +33,7 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            padding: 20px;
+            padding: 10px 20px; /* Reduced padding to make the navbar smaller */
             background-color: transparent; /* Make it transparent */
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add a slight shadow for readability */
             position: fixed;
@@ -45,8 +45,8 @@
         .navbar a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 1em;
+            margin: 0 10px; /* Reduced margin */
+            font-size: 0.9em; /* Slightly smaller font size */
             transition: color 0.3s;
         }
 
@@ -56,7 +56,7 @@
 
         .logo {
             font-weight: 700;
-            font-size: 1.6em;
+            font-size: 1.3em; /* Reduced font size */
         }
 
         /* Add background on scroll */
@@ -66,7 +66,7 @@
 
         /* Main section */
         .main-content {
-            margin-top: 100px;
+            margin-top: 80px; /* Adjusted to account for smaller navbar */
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
@@ -75,16 +75,13 @@
         h1 {
             font-size: 2.5em;
             line-height: 1.2em;
-            color: white; /* All white */
+            color: white; /* White text, no gradient */
             font-weight: 700;
             margin-bottom: 20px;
         }
 
-        /* Style for the word "Script" */
         .gradient-text {
-            background: -webkit-linear-gradient(left, #00adb5, #ff2e63);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #00adb5; /* Removed gradient, added solid color */
         }
 
         p {
@@ -135,7 +132,7 @@
 
         section h2 {
             font-size: 2em;
-            color: white; /* White color */
+            color: white;
             margin-bottom: 20px;
         }
 
@@ -184,44 +181,15 @@
     <section id="faq">
         <h2>Frequently Asked Questions</h2>
         <p>
-            <strong>Q1:</strong> What kind of scripts do you offer?<br>
-            <strong>A:</strong> We offer a wide range of scripts for games, automation, and more, all designed to run smoothly and effectively.
+            <strong>Q1:</strong> What kind of scripts does Venix offer?<br>
+            <strong>Answer:</strong> We offer high-performance scripts tailored to a variety of platforms and needs.
         </p>
-        <p>
-            <strong>Q2:</strong> How do I get started?<br>
-            <strong>A:</strong> Simply click the "Start Now" button above, and you’ll be guided through the process of using our scripts.
-        </p>
-        <p>
-            <strong>Q3:</strong> Are your scripts customizable?<br>
-            <strong>A:</strong> Yes! We offer full customization options for our scripts to fit your specific needs.
-        </p>
-    </section>
-
-    <!-- Discord Section -->
-    <section id="discord">
-        <h2>Join Our Discord</h2>
-        <p>
-            Stay connected with the community, receive support, and get exclusive updates by joining our Discord server. We have a dedicated team ready to assist with any questions or issues you may encounter.
-        </p>
-        <div class="button-container">
-            <button class="button">Join Discord</button>
-        </div>
     </section>
 
     <!-- Footer -->
-    <footer>&copy; Venix 2024</footer>
-
-    <!-- JavaScript for background change on scroll -->
-    <script>
-        window.addEventListener("scroll", function() {
-            const navbar = document.querySelector(".navbar");
-            if (window.scrollY > 50) {
-                document.body.classList.add("scrolled");
-            } else {
-                document.body.classList.remove("scrolled");
-            }
-        });
-    </script>
+    <footer>
+        &copy; 2024 Venix Hub. All rights reserved.
+    </footer>
 
 </body>
 </html>
